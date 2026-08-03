@@ -12,7 +12,8 @@ $aluno = "beltrano";
 const ESCOLA = "Senac";
 ```
 
-- Arrays e objetos genéricos
+- Arrays `$alunos = ["a", ["b"]]`
+- objetos genéricos
 
 ## Recursos para estudar
 
