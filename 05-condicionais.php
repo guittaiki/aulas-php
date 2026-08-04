@@ -54,5 +54,39 @@
            echo "<p class=\"normal\">Estoque normal.</p>";
       } 
     ?>
+
+    <h3>Condicional ENCADEADA: <code>if, eslseif, else</code></h3>
+
+    <?php  
+     $idade = 15;
+     $situacao = ""; // opcional (nem é obrigatório declarar previamente)
+     
+     if($idade <= 12){
+        $situacao = "criança";
+     } elseif ($idade <= 17) {
+        $situacao = "adolescente";
+     } elseif ($idade <= 59){
+        $situacao = "adulto";
+     } else {
+        $situacao = "idoso";
+     }
+    ?>
+    
+      <p>O usuário tem <?= $idade ?> anos e é <?= $situacao ?>.</p>
+
+      <h3>Usando os comandos <code>switch/case/default/break</code></h3>
+
+    <?php
+     // Protótipo de chatbot: 
+     // opções: 1 (informações), 2 (reclamação), 3 (elogio), x (inválida) 
+      $opcao = 1;
+     
+        switch ($opcao) {
+           case 1: echo "<p>Legal, o que quer saber?</p>"; break;
+           case 2: echo "<p>Que pena, o que houve ?</p>"; break;
+           case 3: echo "<p>Que bacana, pode falar !</p>"; break;
+           default: echo "<p>Nao entendi ... vou chamar alguem</p>"; break;
+        }
+    ?>         
 </body>
 </html>
