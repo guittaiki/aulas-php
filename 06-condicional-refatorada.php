@@ -80,11 +80,12 @@
       $opcao = 1;
      
         switch ($opcao) {
-           case 1: echo "<p>Legal, o que quer saber?</p>"; break;
-           case 2: echo "<p>Que pena, o que houve ?</p>"; break;
-           case 3: echo "<p>Que bacana, pode falar !</p>"; break;
-           default: echo "<p>Nao entendi ... vou chamar alguem</p>"; break;
+           case 1: $texto = "Legal, o que quer saber?"; break;
+           case 2: $texto = "Que pena, o que houve?"; break;
+           case 3: $texto = "Que bacana, pode falar!"; break;
+           default: $texto = "Nao entendi ... vou chamar alguem"; break;
         }
-    ?>         
+    ?>
+    <p><?= $texto ?></p>       
 </body>
 </html>
