@@ -38,16 +38,20 @@
     
     <?php  
       if ($qtdEmEstoque < $qtdCritica) {
-           echo "<p class=\"comprar\">É necessário comprar/repor</p>";
-
-           // Condicional ANINHADA (ela está dentro de outro if)
-           if($qtdEmEstoque === 0) {
-              echo "<p><mark class=\"comprar\">🚨URGENTE!</mark></p>";
-           }
-      } else {
-           echo "<p class=\"normal\">Estoque normal.</p>";
-      } 
     ?>
+          <p class="comprar">É necessário comprar/repor</p>
+    <?php              
+           if($qtdEmEstoque === 0) {
+    ?>          
+           <p><mark class="comprar">🚨URGENTE!</mark></p>
+    <?php  
+           }       
+         } else {
+    ?>
+              <p class="normal">Estoque normal</p>         
+    <?php
+         }
+    ?>     
 
     <h3>Condicional ENCADEADA: <code>if, eslseif, else</code></h3>
 
