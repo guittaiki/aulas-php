@@ -28,7 +28,7 @@
 
     <h2>Usando PHP intercalado comandos com HTML</h2>
 
-    <?php $idade = 25; ?>
+    <?php $idade = 5; ?>
 
     <h3>Resultado:</h3>
     
@@ -41,6 +41,30 @@
     ?>
 
     <h3>Resultado (usando php só onde é necessário):</h3>
+
+    <?php
+    if($idade >= 18):
+    ?>
+       <p><b><?= $aluno ?></b> É maior de idade</p> 
+    <?php
+    else: 
+    ?>
+       <p><i><?= $aluno ?></i>é menor de idade</p>  
+    <?php
+    endif;
+    ?> 
+       <h3>Resultado (Refatorado)</h3>
+    
+    <?php
+    if($idade >= 18){
+        $htmlSaida ="<b>$aluno</b>";
+        $palavra = "maior";
+    } else {
+        $htmlSaida = "<i>$aluno</i>";
+        $palavra = "menor";
+    }
+    ?>   
+      <p> <?= $htmlSaida ?> é <?= $palavra ?> de idade</p>     
 </body>
 
 </html>

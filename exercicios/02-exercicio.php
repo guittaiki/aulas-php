@@ -44,7 +44,7 @@
 
 
     <div class="container">
-        <article> 
+    <article> 
         <h2>Pessoa 1</h2> 
         <p>Nome: <?= $pessoa1["usuario"] ?></p>
         <p>Email: <?= $pessoa1["email"] ?></p>
