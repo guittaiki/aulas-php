@@ -67,7 +67,7 @@
      <?php 
      /* Se o usuário NÃO ESTIVER logado, mostre o link de login.
      Caso contrário, exibir uma saudação. */
-     $usuarioLogado = false;
+     $usuarioLogado = true;
 
      if(!$usuarioLogado):
      ?>
