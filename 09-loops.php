@@ -56,7 +56,7 @@
             <summary>Pergunta <?= $i ?></summary>
             <p>Resposta <?= $i ?></p>
         </details>
-        <?php } ?>    
+        <?php } ?>
     </section>
 </body>
 </html>
