@@ -121,6 +121,33 @@
 
                         <hr>
 
+                        <h2>Array_colum</h2>
+                        <p>Retorna um novo array com os valores de uma determinada
+                        chave associativa.</p>
+                        <?php
+                        $servicos = [
+                            ["codigo" => 3, "tipo" => "Limpeza", "status" => "Concluido"],
+                            ["codigo" => 12, "tipo" => "Manutenção", "status" => "Concluido"],
+                            ["codigo" => 1, "tipo" => "Reparo", "status" => "Pendente"],
+                            ["codigo" => 7, "tipo" => "Consultoria", "status" => "Concluido"],
+                            ["codigo" => 4, "tipo" => "Instalação", "status" => "Concluido"]
+                        ];
+
+                        $tipoServicos = array_column($servidos, "tipo");
+                        ?>
+
+                        <pre> <?php var_dump($tipoServicos) ?></pre>
+
+                        <hr>
+
+                        <h2>array_filter()</h2>
+                        <p>Retorna valores para um novo array baseado em alguma condição/critério.</p>
+                        <?php
+                        $servicosConcluidos = array_filter(
+                            $servicos, fn($servico) => $servico["status"] === "concluido"
+                        );
+                        ?>
+
 
 
     </div>
